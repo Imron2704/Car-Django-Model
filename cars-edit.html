@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My web site</title>
+  </head>
+  <body>
+    <form action="/cars/edit/" method="get">
+        {% if reg%}
+            <input type="hidden" name="id" value="{{cars.id}}">
+            <input type="text" name="name" value="{{cars.name}}">    
+        {% else %}
+            <input type="hidden" name="id" value="0">
+            <input type="text" name="name">    
+        {% endif%}
+        <button type="submit">Add OR Update</button>
+    </form>
+  </body>
+</html>
